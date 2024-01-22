@@ -1,0 +1,459 @@
+/* For Project 2 - Homepage */
+*{
+    border-radius:5px;
+}
+img {
+    max-width: 100%;
+    /* keep this in case you add pictures */
+}
+
+body {
+    font-family: Verdana;
+    background: linear-gradient(to right, #280463, #1300e8);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    grid-area:header;
+    background-color:#ab231b;
+    text-align:center;
+}
+
+.headerpic{
+    grid-area:headerpic;
+    padding:5px;
+    height:10vmax;
+}
+
+.headertext{
+    /*grid-area:headertext;*/ 
+    text-align:center;
+}
+
+.headerwrapper{
+    display:grid;
+    justify-items:center;
+    align-items:center;
+    grid-template-columns:25% auto;
+    grid-template-areas:
+        "headerpic header";
+}
+
+header h1{
+    font-size:5vw;
+    color:#ffffff;
+    font-family:Impact;
+    text-shadow: 2px 2px 5px #3217ff;
+    margin: 0;
+}
+
+header h3{
+    font-size:3vw;
+    color:#ffffff;
+    margin:0;
+}
+
+nav {
+    grid-area: nav;
+    background: #226324;
+}
+
+nav ul {
+    padding: 0;
+}
+
+
+nav li {
+    padding: 10px 10px;
+    list-style-type: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav a:hover {
+    text-shadow: 2px 2px 5px #3217ff;
+}
+
+main {
+    grid-area: main;
+    background: #A4C4FE;
+    color: #000080;
+    padding: 5px;
+}
+
+main h2 {
+    text-align: center;
+    margin: 1%;
+}
+
+main p {
+    color: #000080;
+    padding: 1% 2%;
+    font-size: 1em;
+}
+
+main a {
+    color: navy;
+}
+
+footer {
+    grid-area: footer;
+    background: #400057;
+    padding: 5px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0;
+}
+
+aside {
+    background-color: #ffdd03;
+    border-radius: 5px;
+}
+
+aside h2 {
+    color: #0000b0;
+    text-align: center;
+}
+
+aside li {
+    color: #0000b0;
+    font-size: 1.25em;
+    padding: 10px 0;
+}
+article {
+    background-color: #0000b0;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+article h3 {
+    text-align: left;
+
+}
+
+
+figure{
+    margin:0;
+    text-align:center;
+}
+
+figcaption{
+    padding:5px;
+    color:#0000b0;
+    font-weight:bold;
+}
+
+figure img{
+    margin-top:16px;
+    max-width:20em;
+    border:2px solid #0000b0;
+}
+
+.fig2{
+    background-color:white;
+    grid-area:fig2;
+}
+
+.fig1{
+    grid-area:fig1;
+}
+audio {
+    max-width: 100%;
+    display: block; 
+    margin: 0 auto; 
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+
+    margin: 0 auto; 
+}
+
+.video, .audio {
+    margin: 20px 0; 
+    display: flex;
+    justify-content: center; 
+}
+
+form{
+    background-color:#FFA500;
+    width:90%;
+    margin:auto;
+    color:black;
+    padding:10px;
+
+}
+
+input{
+    margin: 1px 0 10px 0;
+
+}
+
+.button{
+    padding:5px;
+    background-color:#a4c4fe;
+    color:#0000b0;
+}
+
+.call{
+    border-radius:5px;
+    text-align:center;
+    background-color:#0000b0;
+    width:60%;
+    padding: 5px;
+    margin:10px auto 5px auto;
+
+}
+
+.call p{
+    color:#ffffff;
+    font-size:1.5em;
+    padding:0;
+    margin:0;
+
+}
+
+.div1{
+    grid-area:div1;
+}
+
+.div2{
+    grid-area:div2;
+} 
+/*---------------------------Mobile Layout----------------------------*/
+.container1 {
+    /* for index.html */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: .5em;
+    margin: 1%;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+.container2 {
+    /* for index.html */
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: .5em;
+    margin: 1%;
+    grid-template-areas:
+    " header"
+        "nav"
+        "main"
+        "aside "
+        "footer";
+}
+
+.container3 {
+    /*for blog.html*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: .5em;
+    margin: 1%;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "top"
+        "middle"
+        "bottom"
+        "footer";
+}
+.container4{
+    display:grid;
+    grid-template-columns:100%;
+    margin:1%;
+    grid-gap:.5em;
+    grid-template-areas:
+    
+        "header"
+        "nav"
+        "main"
+        "fig2"
+        "footer";
+}
+
+.toggleNav {
+    display: grid;
+    /* This is what allows the hamburger icon and "Menu" to display */
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#flex-nav ul {
+    display: none;
+    /*jQuery toggles the nav from to this class to the .open when clicked*/
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#flex-nav ul.open {
+    /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+    display: grid;
+}
+
+#flex-nav li {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/*-----------------------Tablet Media Query------------------------*/
+@media only screen and (min-width: 480px) {
+    .container1 {
+        /* for index.html */
+        grid-template-columns: 1fr 3fr;
+        /* This sets the sidebar to 1 fraction and the main content to 3 fractions of the available space */
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "footer footer";
+    }
+
+    .container2 {
+        /* for index.html */
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: .5em;
+        margin: 1%;
+        grid-template-areas:
+            "header header"
+            "nav aside"
+            "main main"
+            "footer footer";
+    }
+
+    .container3 {
+    /*for blog.html*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: .5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "top"
+        "middle"
+        "bottom"
+        "footer";
+}
+
+
+ .container4{
+        grid-template-columns:auto 1fr;
+        grid-template-areas:
+            "header header"
+            
+            "nav main"
+            "fig2 fig2"
+            "footer footer";
+    }
+    
+    .nestedgrid{
+        display:grid;
+        grid-template-columns:100%;
+        grid-template-areas:
+            "section"
+            
+            "fig1";
+    }
+
+    /* Below will change from hamburger menu to side navigation*/
+
+    .toggleNav {
+        display: none;
+        /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+    }
+
+    #flex-nav ul {
+        display: grid;
+        text-align: left;
+    }
+
+    #flex-nav li {
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+}
+
+/*-----------------------Desktop Media Query------------------------*/
+@media only screen and (min-width: 960px) {
+
+    .container1 {
+        /* for index.html */
+        grid-template-columns: 1fr 4fr;
+        /* One fraction for the sidebar (nav), four fractions for the main content */
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "footer footer";
+    }
+
+    .container2 {
+        /* for index.html */
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: .5em;
+        margin: 1%;
+        grid-template-areas:
+            "header header header"
+            "nav main  aside"
+
+
+            "footer footer footer"
+    }
+
+      .container3 {
+    /*for blog.html*/
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: .5em;
+    margin: 1%;
+    grid-template-areas:
+        "header header header"
+        "nav main top"
+        "nav main middle"
+       "nav main bottom"
+        "footer footer footer";
+}
+
+ .nestedgrid{
+        grid-template-columns:2fr 1fr;
+        grid-template-areas:
+        
+            "section fig1";
+    }
+
+ .nestedgrid2{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:
+            "div1 div2";
+    }
+
+
+
+
+
+
+
+}
